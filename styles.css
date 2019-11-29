@@ -138,7 +138,7 @@
 	-webkit-transform: rotate(360deg);
 }
 /* HEADER ENEDED */
-.content-top{
+/* .content-top{
 	display:grid;
 	grid-template-columns:1fr 1fr;
 	grid-gap: 0;
@@ -160,6 +160,7 @@
 }
 .content-top>.l-img img{
 	width: 100%;
+	height: 100%;
 }
 .content-top-right{
 	display: grid;
@@ -169,10 +170,10 @@
 
 .content-top-right>.s-img img{
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 /*  */
-.content-2{
+/* .content-2{
 	display: grid;
 	grid-template-rows: repeat(3,1fr);
 }
@@ -184,12 +185,13 @@
 
 .r-img img{
 	width: 100%;
+	height: 100%;
 }
 
 .row-2{
  display: grid;
  grid-template-columns: 2fr  1fr 1fr;
-}
+}  */
 /* FOOTER STARTED */
 footer{
     text-align: center;
@@ -200,4 +202,411 @@ footer img{
 }
 footer p{
     padding: 1rem;
+}
+/* Index-2 CSS */
+.wrapper{
+	width: 100%;
+	height: auto;
+}
+.main-blocks{
+	/* transition: all 1s ease-out; */
+	/* position: relative; */
+	display: grid;
+	grid-template-columns: repeat(4 , 1fr);
+	grid-template-rows: repeat(5 , 1fr);
+}
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8, .box-9, .box-10, .box-11, .box-12, .box-13, .box-14{
+    overflow: hidden;
+    height:100%;
+    position: relative;
+    transition: all 500ms ease;
+}
+.box-1{
+	grid-area: 1/1/3/3;
+}
+.box-8{
+	grid-area: 3/3/4/5;
+}
+.box-9{
+	grid-area: 4/1/5/3;
+}
+.box-14{
+	grid-area: 5/3/6/5;
+}
+.main-blocks img{
+	width: 100%;
+	height: 100%;
+	transition: all 1s ease-out;
+}
+.main-blocks img:hover{
+	transform: scale(1.1) rotate(3deg);
+}
+/* }
+.overlay-type-one {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 60px 60px;
+}
+.overlay-inner {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+}
+.line-one {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.line-one:before {
+    position: absolute;
+    content: '';
+    right: -40px;
+    top: 0px;
+    width: 70%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.20);
+}
+.line-one:after {
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: -40px;
+    height: 70%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.20);
+}
+.line-two {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.line-two:before {
+    position: absolute;
+    content: '';
+    left: -40px;
+    bottom: 0px;
+    width: 70%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.20);
+}
+.line-two:after {
+    position: absolute;
+    content: '';
+    left: 0px;
+    bottom: -40px;
+    height: 70%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.20);
+}
+.content {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 0px 0px 50px 50px;
+}
+.overlay-type-one h2 {
+    position: relative;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+.btn-style-one {
+    position: relative;
+    padding: 16px 32px 14px;
+    line-height: 24px;
+    background: #ff3271;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #ff3271;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+} */
+/* .overlay-type-two {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: #ffffff;
+    text-align: center;
+    transition: all 700ms ease;
+}
+.overlay-type-two:before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: 50%;
+    margin-top: -40px;
+    width: 0%;
+    height: 80px;
+    display: block;
+    transition: all 500ms ease;
+    background: rgba(0,0,0,0.90);
+}
+.overlay-type-two .overlay-inner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+    padding: 20px 10px;
+}
+.overlay-type-two:after {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 50%;
+    margin-top: -40px;
+    width: 0%;
+    height: 80px;
+    display: block;
+    transition: all 500ms ease;
+    background: rgba(255,50,113,0.90);
+}
+.overlay-type-two .overlay-inner .content {
+    position: relative;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.icon {
+    position: relative;
+} */
+.box-1 h2{
+	color: #ffffff;
+    font-size: 60px;
+    line-height: 1.4em;
+	margin-bottom: 20px;
+    position: absolute;
+    z-index: 1;
+	top: 58%;
+    left: 18%;
+	font-weight: bolder;
+	transition: all 500ms ease;
+}
+.box-1 h2:hover{
+	color: #ff3271;
+}
+.box-1 button {
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    top: 75%;
+    padding: 16px 32px 14px;
+    line-height: 24px;
+    background: #ff3271;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #ff3271;
+	text-transform: uppercase;
+	transition: all 500ms ease;
+}
+.box-1 button:hover{
+	background: transparent;
+}
+.box-3 h3 {
+    top: 40%;
+    right: 15%;
+    font-size: 50px;
+    color: #ffffff;
+    line-height: 1.3em;
+    position: absolute;
+    z-index: 1;
+}
+.para-text {
+    position: absolute;
+    z-index: 1;
+	top: 45%;
+	left: 28%;
+	color: #fff;
+}
+.para-text h3{
+	font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.para-text p{
+	padding: 0% 69% 0% 0%;
+	font-size: 18px;
+	font-weight: 400;
+    line-height: 1.4em;
+}
+.box-11 h3{
+	top: 68%;
+    right: 2%;
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.3em;
+    position: absolute;
+    z-index: 1;
+}
+.con-box{
+	position: absolute;
+    z-index: 1;
+    bottom: 9%;
+    left: 35%;
+}
+.con-box i{
+	font-size: 60px;
+	line-height: 1em;
+	color: #a71eda;
+    background: linear-gradient(left, #ff3271, #a71eda);
+}
+.con-box h3{
+	position: absolute;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #fff;
+    text-align: center;
+    left: -95%;
+}
+.overlay-pink{
+    position: absolute;
+    top: 8%;
+    display: inline-flex;
+    right: 37%;
+}
+
+.left{
+    height: 80px;
+    width: 0%;
+    background: rgba(255,50,113,0.90);
+    position: absolute;
+    z-index: 1;
+    top:40%;
+    transition: all 500ms ease;
+}
+.icon {
+    font-size: 18px;
+    color: #ff3271;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    margin: 0% 60%;
+    position: absolute;
+    top: 19%;
+    visibility: hidden;
+}
+.icon:hover{
+    color: #fff;
+    background-color: #000000;
+}
+.box-2:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
+}
+.box-2:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.right{
+    height: 80px;
+    width: 0%;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    z-index: 1;
+    top:40%;
+    right: 0;
+    transition: all 500ms ease;
+}
+.box-2:hover .right{
+    width: 50%;
+}
+.right .icon{
+    right: 1%;
+}
+.box-4:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.box-4:hover .right{
+    width: 50%;
+}
+.box-4:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
+}
+.box-5:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.box-5:hover .right{
+    width: 50%;
+}
+.box-5:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
+}
+.box-8:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.box-8:hover .right{
+    width: 50%;
+}
+.box-8:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
+}
+.box-9:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.box-9:hover .right{
+    width: 50%;
+}
+.box-9:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
+}
+.box-10:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.box-10:hover .right{
+    width: 50%;
+}
+.box-10:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
+}
+.box-12:hover .icon{
+    visibility: visible;
+    transition: all 500ms ease;
+}
+.box-12:hover .right{
+    width: 50%;
+}
+.box-12:hover .left{
+    width: 50%;
+    transition: all 500ms ease;
 }
